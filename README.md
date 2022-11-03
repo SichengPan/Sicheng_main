@@ -10,7 +10,7 @@ My email: pansicheng037@gmail.com
 
 # Projects in this repository
 1. Python
-   * Hangman game
+   * [Hangman game][Hangman]
 
 2. Android development
    * [A basic calculator built in Android Studio][Android-calculator]
@@ -23,6 +23,8 @@ My email: pansicheng037@gmail.com
 
 
 
+
+[Hangman]: https://github.com/SichengPan/Sicheng_main/tree/main/Hangman
 
 [Android-calculator]: https://github.com/SichengPan/Sicheng_main/tree/main/Android_Calculator
 
