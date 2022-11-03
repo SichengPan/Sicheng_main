@@ -9,6 +9,11 @@ Click to go to my Linkedin page: [![LinkedIn][linkedin-shield]][linkedin-url]
 My email: pansicheng037@gmail.com
 
 # Projects in this repository
+1. Python
+   * Hangman game
+
+2. Android development
+   * [A basic calculator built in Android Studio][Android-calculator]
 
 
 
@@ -19,7 +24,7 @@ My email: pansicheng037@gmail.com
 
 
 
-
+[Android-calculator]: https://github.com/SichengPan/Sicheng_main/tree/main/Android_Calculator
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sicheng-pan-332911231/
