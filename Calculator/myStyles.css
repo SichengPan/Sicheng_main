@@ -1,0 +1,189 @@
+header.element_selector
+{
+    height:80px;
+    background-color:#C0504D;
+    color:white;
+    text-align: center;
+}
+
+nav
+{
+    height:50px;
+    background-color:#E5B8B7;
+    border-style: solid;
+    border-color:#E5B8B7;
+    border-top-color:white;
+    color:white;
+    text-align: center;
+    line-height: 50px;
+}
+
+aside
+{
+    width:150px;
+    background-color:#E5B8B7;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-top-color:white;
+    border-right-color:white;
+    text-align: center;
+    line-height: 50px;
+    float:left; /* This means: put 'aside' on the left of the line, this makes main to be located on its right */
+    height: 300px /* make 'aside' and 'main' of the same height */
+} 
+
+main
+{
+    background-color:#F2DBDB;
+    border-top-style: solid;
+    border-top-color:white;
+    height: 300px; /* make 'aside' and 'main' of the same height */
+    padding-left:175px /* This will create a left-margin for 175px for the text */
+}
+
+footer
+{
+    height: 100px;
+    background-color:#C0504D;
+    text-align: center;
+}
+
+img
+{
+    width:80px;
+    height:80px;
+    text-align: center;
+    margin-left:40px;
+    margin-right:40px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* 
+This calculator requires a body with no margin and padding
+It should be black for background, orange for buttons on the side, 
+pale grey for first 3 buttons, 
+deep grey for the rest buttons
+*/
+body 
+{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to right, silver, white); /* color changes from left to right */
+}
+
+/* Placing buttons and outputs properly */
+/* restrict the buttons to a specific area */
+/* justify-content and align-items, watch this:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container */
+.CalculatorFormat
+{
+    display: grid;  /* Display it as a grid */
+    justify-content: center;  /* Put the buttons in the center on the horizontal axis */
+    align-content: center;  /* Put the buttons in the center on the vertical axis */
+    /*
+    align-content determines the spacing between lines
+    align-items determines how the items as a whole are aligned within the container.
+    align-contents will consider all contents as a whole's place in one page
+    align-items will consider all items' place in each grid
+    align-content: center ---- put all contents in the center of one page
+    align-items: center ---- put all items in the center of their grids, regardless of the size
+    see: https://stackoverflow.com/questions/27539262/whats-the-difference-between-align-content-and-align-items
+    */
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px); /* For columns in a line, each 100px wide */
+    grid-template-rows: minmax(200px, auto) repeat(5, 65px); 
+    /* For first column, min 120px, max auto. For last 5 columns in a line, each 100px tall */
+}
+
+/* Styling the output section */
+/* See https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.OutputSection
+{
+    background-color:black;
+    word-wrap: break-word; /* It is used to broken the words at arbitrary points to prevent overflow. */
+    word-break: break-all; /* make sure all characters are with the boundary, if no, break the word */
+
+    display: flex; /* create a flex container */
+    align-items: flex-end;
+    flex-direction: column;
+    grid-column: 1 / -1; /* maake the output bar as long as the width of an entire body */
+    padding: 10px;
+}
+
+.double_length
+{
+    grid-column: span 2;
+    background-color:#434242; /* background color */
+    color: white; /* text color */
+}
+
+.button-normal
+{
+    background-color:#434242; /* background color */
+    color: white; /* text color */
+}
+.button-normal:active /* Change the color of the button when clicked */
+{
+    background-color:#a9a9a9;
+}
+
+.button-orange
+{
+    background-color:#f49e34; /* background color */
+    color: white; /* text color */
+}
+
+.button-orange:active
+{
+    background-color:#f6d2a7; /* background color */
+    color: white; /* text color */
+}
+
+.button-grey
+{
+    background-color:#e3e3e3; /* background color */
+    color: black; /* text color */
+}
+
+.button-grey:active
+{
+    background-color:#f0f0f0; /* background color */
+    color: black; /* text color */
+}
+
+.display
+{
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: white;
+    text-align: right;
+
+    background-color:black;
+    word-wrap: break-word; /* It is used to broken the words at arbitrary points to prevent overflow. */
+    word-break: break-all; /* make sure all characters are with the boundary, if no, break the word */
+
+    display: flex; /* create a flex container */
+    align-items: flex-end;
+    flex-direction: column;
+    grid-column: 1 / -1; /* maake the output bar as long as the width of an entire body */
+    padding: 10px;
+}
+
+.OutputSection .previous-operand
+{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.OutputSection .sign
+{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.OutputSection .current-operand
+{
+    color: white;
+    font-size: 2.5rem;
+}

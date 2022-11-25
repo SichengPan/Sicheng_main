@@ -1,0 +1,67 @@
+<!-- This is a calculator that can do +-x/ and % and allclear and +/- -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">  <!-- must be defined, or error on validator-->
+        <!-- charset stipulate the exact code for character in this website -->
+        <title>My Calcultor</title>  <!-- This text will be shown on the label page on the top of the browser -->
+        <!-- rel means: relationship between two files -->
+        <link rel="stylesheet" type="text/css" href="myStyles.css"> 
+
+    </head>
+
+    <body>
+
+        <!-- Create buttons -->
+        <div class="CalculatorFormat">
+            <!-- Output section -->
+            <div class="display">0</div>
+
+            <!--<div class="OutputSection">
+                <div First-operand class="first-operand">123</div>
+                <div Sign class="sign">+</div>
+                <div Second-operand class="second-operand">456</div>
+            </div>-->
+
+            <!-- Buttons -->
+
+            <!-- Line 1 -->
+            <button Clear-all class="button-grey">AC</button>
+            <button Change-sign class="button-grey">+/-</button>
+            <button Calculate-percentage class="button-grey">%</button>
+            <button Division class="button-orange">÷</button>
+
+            <!-- Line 2 -->
+            <button Number7 class="button-normal">7</button>
+            <button Number8 class="button-normal">8</button>
+            <button Number9 class="button-normal">9</button>
+            <button Multiplication class="button-orange">x</button>
+
+            <!-- Line 3 -->
+            <button Number4 class="button-normal">4</button>
+            <button Number5 class="button-normal">5</button>
+            <button Number6 class="button-normal">6</button>
+            <button Subtraction class="button-orange">-</button>
+
+            <!-- Line 4 -->
+            <button Number1 class="button-normal">1</button>
+            <button Number2 class="button-normal">2</button>
+            <button Number3 class="button-normal">3</button>
+            <button Addition class="button-orange">+</button>
+
+            <!-- Line 5 -->
+            <button Number0 class="double_length">0</button>
+            <button Decimal class="button-normal">.</button>
+            <button Equals class="button-orange">=</button>
+
+        </div>
+        
+        <!-- Import an external javascript in HTML -->
+        <script type="text/javascript" src="jsFiles/Calculator.js"></script>
+    </body>
+
+
+</html>
+
+
